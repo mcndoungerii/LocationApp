@@ -14,7 +14,7 @@ class _ImageInputState extends State<ImageInput> {
     return Row(
       children: <Widget>[
         Container(
-          height: 100,
+          height: 150,
           width: 100,
           decoration: BoxDecoration(
             border: Border.all(
@@ -32,6 +32,7 @@ class _ImageInputState extends State<ImageInput> {
                   'No Image available',
                   textAlign: TextAlign.center,
                 ),
+          alignment: Alignment.center,
         ),
         SizedBox(
           width: 10,
@@ -41,7 +42,8 @@ class _ImageInputState extends State<ImageInput> {
             icon: Icon(
               Icons.camera,
             ),
-            color: Theme.of(context).primaryColor,
+            label: Text('Take a Picture'),
+            textColor: Theme.of(context).primaryColor,
             onPressed: () {},
           ),
         ),
