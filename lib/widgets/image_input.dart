@@ -33,7 +33,18 @@ class _ImageInputState extends State<ImageInput> {
                   textAlign: TextAlign.center,
                 ),
         ),
-        FlatButton()
+        SizedBox(
+          width: 10,
+        ),
+        Expanded(
+          child: FlatButton.icon(
+            icon: Icon(
+              Icons.camera,
+            ),
+            color: Theme.of(context).primaryColor,
+            onPressed: () {},
+          ),
+        ),
       ],
     );
   }
