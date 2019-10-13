@@ -42,8 +42,8 @@ class _ImageInputState extends State<ImageInput> {
     return Row(
       children: <Widget>[
         Container(
-          height: 150,
-          width: 100,
+          height: 100,
+          width: 150,
           decoration: BoxDecoration(
             border: Border.all(
               width: 1,
