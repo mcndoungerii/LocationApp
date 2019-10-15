@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import './add_place_screen.dart';
 import '../providers/great_places.dart';
 
+import './place_detail_screen.dart';
+
 class PlaceListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -59,6 +61,10 @@ class PlaceListScreen extends StatelessWidget {
                           subtitle: Text(greatPlace.items[i].location.address),
                           onTap: () {
                             //go to detail page
+                            Navigator.of(context).pushNamed(
+                              PlaceDetailScreen.routeName,
+                              arguments: greatPlace.items[i].id,
+                            );
                           },
                         ),
                       ),
