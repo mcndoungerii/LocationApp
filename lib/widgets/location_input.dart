@@ -6,6 +6,8 @@ import '../helpers/location_helper.dart';
 import '../screens/map_screen.dart';
 
 class LocationInput extends StatefulWidget {
+  final Function onSelectLocation;
+  LocationInput(this.onSelectLocation);
   @override
   _LocationInputState createState() => _LocationInputState();
 }
@@ -34,7 +36,9 @@ class _LocationInputState extends State<LocationInput> {
       return;
     }
     //...
-    print(selectedLocation.latitude);
+
+    widget.onSelectLocation(
+        selectedLocation.latitude, selectedLocation.longitude);
   }
 
   @override
